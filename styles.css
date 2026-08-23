@@ -1,0 +1,805 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  background-color: #f4f7f9;
+
+  color: #394b6c;
+
+  max-width: 540px;
+
+  min-height: 100vh;
+
+  margin: 0 auto;
+
+  padding: 24px;
+
+}
+
+
+/* ========================================
+   CABEÇALHO
+   ======================================== */
+
+.cabecalho {
+
+  text-align: center;
+
+  margin-bottom: 24px;
+
+}
+
+
+.etiqueta {
+
+  color: #0f766e;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 8px;
+
+}
+
+
+h1 {
+
+  color: #263852;
+
+  font-size: 32px;
+
+  margin-bottom: 10px;
+
+}
+
+
+.descricao {
+
+  color: #718096;
+
+  font-size: 15px;
+
+  line-height: 1.5;
+
+}
+
+
+/* ========================================
+   TOTAL GERAL
+   ======================================== */
+
+.caixa-total {
+
+  background-color: #0f766e;
+
+  color: #ffffff;
+
+  padding: 26px;
+
+  border-radius: 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  box-shadow:
+    0 8px 20px
+    rgba(15, 118, 110, 0.18);
+
+  margin-bottom: 24px;
+
+}
+
+
+.icone-total {
+
+  width: 54px;
+
+  height: 54px;
+
+  border-radius: 16px;
+
+  background-color:
+    rgba(255, 255, 255, 0.16);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  flex-shrink: 0;
+
+}
+
+
+.titulo-total {
+
+  font-size: 14px;
+
+  opacity: 0.85;
+
+  margin-bottom: 3px;
+
+}
+
+
+.total-gasto {
+
+  font-size: 38px;
+
+  line-height: 1.1;
+
+  margin: 4px 0 8px 0;
+
+}
+
+
+.comprovantes {
+
+  font-size: 13px;
+
+  opacity: 0.85;
+
+}
+
+
+.quantidade {
+
+  font-weight: bold;
+
+}
+
+
+/* ========================================
+   ÁREA DA FOTO
+   ======================================== */
+
+.area-foto {
+
+  margin-bottom: 20px;
+
+}
+
+
+.titulo-foto {
+
+  color: #263852;
+
+  font-size: 17px;
+
+  font-weight: bold;
+
+  margin-bottom: 10px;
+
+}
+
+
+.botao-foto {
+
+  background-color: #ffffff;
+
+  border: 3px dashed #c3cfe0;
+
+  border-radius: 18px;
+
+  padding: 24px 18px;
+
+  min-height: 120px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 14px;
+
+  text-align: center;
+
+  font-weight: bold;
+
+  color: #394b6c;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+
+}
+
+
+.botao-foto:active {
+
+  background-color: #eef7f6;
+
+  border-color: #0f766e;
+
+  transform: scale(0.98);
+
+}
+
+
+.botao-foto small {
+
+  color: #8491a5;
+
+  font-size: 12px;
+
+  font-weight: normal;
+
+}
+
+
+.icone-camera {
+
+  font-size: 30px;
+
+}
+
+
+input {
+
+  display: none;
+
+}
+
+
+/* ========================================
+   STATUS
+   ======================================== */
+
+.resultado-area {
+
+  margin-bottom: 22px;
+
+}
+
+
+.status {
+
+  background-color: #ffffff;
+
+  border-radius: 14px;
+
+  padding: 14px;
+
+  color: #718096;
+
+  font-size: 14px;
+
+  line-height: 1.4;
+
+}
+
+
+/* ========================================
+   LISTA DE COMPROVANTES
+   ======================================== */
+
+.lista-area {
+
+  margin-bottom: 20px;
+
+}
+
+
+.cabecalho-lista {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 12px;
+
+}
+
+
+.cabecalho-lista h2 {
+
+  color: #263852;
+
+  font-size: 20px;
+
+}
+
+
+#contador-lista {
+
+  background-color: #eaf4f3;
+
+  color: #0f766e;
+
+  min-width: 28px;
+
+  height: 28px;
+
+  padding: 0 8px;
+
+  border-radius: 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+}
+
+
+/* ========================================
+   CARD DO COMPROVANTE
+   ======================================== */
+
+.comprovante-card {
+
+  background-color: #ffffff;
+
+  border-radius: 16px;
+
+  margin-bottom: 10px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 3px 10px
+    rgba(57, 75, 108, 0.06);
+
+}
+
+
+.comprovante-cabecalho {
+
+  width: 100%;
+
+  background: none;
+
+  border: none;
+
+  padding: 16px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  color: #263852;
+
+  text-align: left;
+
+  cursor: pointer;
+
+}
+
+
+.comprovante-titulo {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+}
+
+
+.icone-documento {
+
+  font-size: 22px;
+
+}
+
+
+.comprovante-titulo strong {
+
+  font-size: 15px;
+
+}
+
+
+.comprovante-resumo {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+}
+
+
+.comprovante-resumo strong {
+
+  color: #0f766e;
+
+  font-size: 14px;
+
+}
+
+
+.seta {
+
+  color: #8491a5;
+
+  font-size: 11px;
+
+  transition: transform 0.2s;
+
+}
+
+
+.comprovante-card.aberto
+.seta {
+
+  transform: rotate(180deg);
+
+}
+
+
+/* ========================================
+   CONTEÚDO DO COMPROVANTE
+   ======================================== */
+
+.comprovante-conteudo {
+
+  display: none;
+
+  padding: 0 14px 16px 14px;
+
+}
+
+
+.comprovante-card.aberto
+.comprovante-conteudo {
+
+  display: block;
+
+}
+
+
+.titulo-itens {
+
+  color: #718096;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 8px;
+
+}
+
+
+/* ========================================
+   ITEM
+   ======================================== */
+
+.item {
+
+  background-color: #f7f9fa;
+
+  border-radius: 10px;
+
+  padding: 11px;
+
+  margin-bottom: 7px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+}
+
+
+.item-info {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  min-width: 0;
+
+}
+
+
+.numero-item {
+
+  background-color: #eaf4f3;
+
+  color: #0f766e;
+
+  width: 27px;
+
+  height: 27px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 11px;
+
+  font-weight: bold;
+
+  flex-shrink: 0;
+
+}
+
+
+.nome-item {
+
+  color: #263852;
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+  word-break: break-word;
+
+}
+
+
+.valor-item {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 2px;
+
+  white-space: nowrap;
+
+}
+
+
+.valor-item small {
+
+  color: #8491a5;
+
+  font-size: 10px;
+
+}
+
+
+.valor-item strong {
+
+  color: #0f766e;
+
+  font-size: 13px;
+
+}
+
+
+/* ========================================
+   TOTAL DO COMPROVANTE
+   ======================================== */
+
+.linha-total {
+
+  margin-top: 12px;
+
+  padding: 13px 5px 3px 5px;
+
+  border-top: 2px solid #e5eaf0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  color: #263852;
+
+}
+
+
+.linha-total span {
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+}
+
+
+.linha-total strong {
+
+  color: #0f766e;
+
+  font-size: 18px;
+
+}
+
+
+/* ========================================
+   LISTA VAZIA
+   ======================================== */
+
+.lista-vazia {
+
+  background-color: #ffffff;
+
+  border: 2px dashed #d8e0e8;
+
+  border-radius: 16px;
+
+  padding: 30px 20px;
+
+  text-align: center;
+
+  color: #8491a5;
+
+}
+
+
+.lista-vazia span {
+
+  display: block;
+
+  font-size: 32px;
+
+  margin-bottom: 10px;
+
+}
+
+
+.lista-vazia p {
+
+  font-size: 13px;
+
+}
+
+
+/* ========================================
+   ERRO
+   ======================================== */
+
+.erro {
+
+  background-color: #fff1f1;
+
+  border: 1px solid #ffd0d0;
+
+  color: #a33a3a;
+
+  border-radius: 12px;
+
+  padding: 14px;
+
+  margin-bottom: 10px;
+
+  font-size: 13px;
+
+  line-height: 1.4;
+
+  word-break: break-word;
+
+}
+
+
+/* ========================================
+   INFORMAÇÃO
+   ======================================== */
+
+.informacao {
+
+  background-color: #eaf4f3;
+
+  border-radius: 14px;
+
+  padding: 14px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  color: #52706e;
+
+  font-size: 13px;
+
+  line-height: 1.4;
+
+}
+
+
+.informacao span {
+
+  font-size: 18px;
+
+  flex-shrink: 0;
+
+}
+
+
+/* ========================================
+   TELAS PEQUENAS
+   ======================================== */
+
+@media (max-width: 380px) {
+
+  body {
+
+    padding: 16px;
+
+  }
+
+
+  h1 {
+
+    font-size: 28px;
+
+  }
+
+
+  .total-gasto {
+
+    font-size: 32px;
+
+  }
+
+
+  .caixa-total {
+
+    padding: 20px;
+
+  }
+
+
+  .comprovante-resumo strong {
+
+    font-size: 12px;
+
+  }
+
+
+  .nome-item {
+
+    font-size: 12px;
+
+  }
+
+}
