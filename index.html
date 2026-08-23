@@ -1,0 +1,193 @@
+<!doctype html>
+
+<html lang="pt-br">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Contador de Nota</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+  <main>
+
+    <!-- CABEÇALHO -->
+
+    <header class="cabecalho">
+
+      <p class="etiqueta">
+        CONTROLE DE GASTOS
+      </p>
+
+      <h1>
+        Contador de nota
+      </h1>
+
+      <p class="descricao">
+        Fotografe seus comprovantes e acompanhe
+        seus gastos de forma simples.
+      </p>
+
+    </header>
+
+
+    <!-- TOTAL GERAL -->
+
+    <section class="caixa-total">
+
+      <div class="icone-total">
+        R$
+      </div>
+
+      <div>
+
+        <p class="titulo-total">
+          Total gasto
+        </p>
+
+        <h2 class="total-gasto">
+          R$ 0,00
+        </h2>
+
+        <p class="comprovantes">
+          <span class="quantidade">0</span>
+          comprovantes lidos
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ADICIONAR COMPROVANTE -->
+
+    <section class="area-foto">
+
+      <p class="titulo-foto">
+        Adicionar comprovante
+      </p>
+
+      <label class="botao-foto">
+
+        <span class="icone-camera">
+          📷
+        </span>
+
+        <span>
+          Toque para adicionar
+          <br>
+
+          <small>
+            tirar foto ou escolher uma imagem
+          </small>
+        </span>
+
+        <input
+          class="foto"
+          onchange="lerFoto()"
+          type="file"
+          accept="image/*"
+        >
+
+      </label>
+
+    </section>
+
+
+    <!-- STATUS -->
+
+    <section class="resultado-area">
+
+      <div class="status">
+        Aguardando comprovante...
+      </div>
+
+    </section>
+
+
+    <!-- LISTA DE COMPROVANTES -->
+
+    <section class="lista-area">
+
+      <div class="cabecalho-lista">
+
+        <h2>
+          Comprovantes
+        </h2>
+
+        <span id="contador-lista">
+          0
+        </span>
+
+      </div>
+
+
+      <div
+        id="lista-comprovantes"
+        class="lista-comprovantes"
+      >
+
+        <div class="lista-vazia">
+
+          <span>🧾</span>
+
+          <p>
+            Nenhum comprovante adicionado ainda.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- INFORMAÇÃO -->
+
+    <section class="informacao">
+
+      <span>
+        💡
+      </span>
+
+      <p>
+        Você pode adicionar quantos comprovantes
+        quiser. Cada um será guardado separadamente.
+      </p>
+
+    </section>
+
+  </main>
+
+
+  <!-- PUTER -->
+
+  <script
+    src="https://js.puter.com/v2/"
+    onload="
+      console.log('PUTER: SCRIPT CARREGOU');
+      console.log('PUTER:', typeof window.puter);
+    "
+    onerror="
+      console.error('PUTER: ERRO AO CARREGAR SCRIPT');
+    ">
+  </script>
+
+
+  <!-- JAVASCRIPT DO PROJETO -->
+
+  <script src="scripts.js"></script>
+
+</body>
+
+</html>
